@@ -4,22 +4,27 @@ pre-commit-golang
 
 golang hooks for http://pre-commit.com/
 
+### install pre-commit
+
+```shell
+brew install pre-commit
+```
+
+### 进入你自己的仓库目录,执行以下命令, 生成.git/hooks/pre-commit
+
+```shell
+pre-commit install
+```
+
 ### Using these hooks
 
 Add this to your `.pre-commit-config.yaml`
 
-    - repo: git://github.com/dnephin/pre-commit-golang
+    - repo: git://github.com/zhuqiuzhi/pre-commit-golang
       sha: HEAD
       hooks:
         - id: go-fmt
         - id: go-vet
-        - id: go-lint
-        - id: validate-toml
-        - id: no-go-testing
-        - id: gometalinter
-        - id: golangci-lint
-        - id: go-critic
-        - id: go-unit-tests
         - id: go-build
 
 ### Available hooks
